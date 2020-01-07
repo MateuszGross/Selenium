@@ -1,22 +1,21 @@
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Set;
 
 public class SeleniumTest {
 
     @Test
     public void chromeOpenTest() {
-        String driverPath = "C:/Users/Admin/Desktop/Kurs JAVA/Selenium1/src/main/resources/executables/drivers/chromedriver.exe";
+        String driverPath = "C:/Users/Admin/Desktop/JAVA/Selenium/src/main/resources/executables/drivers/chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", driverPath);
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("C:\\Users\\Admin\\Desktop\\MaterialyDoSelenium\\Test.html");
+        //driver.get("C:\\Users\\Admin\\Desktop\\MaterialyDoSelenium\\Test.html");
         /*WebElement clickOnMeButton = driver.findElement(By.id("clickOnMe"));
         WebElement firstNameInput = driver.findElement(By.name("fname"));
         WebElement W3schools = driver.findElement(By.linkText("Visit W3Schools.com!"));
@@ -96,6 +95,92 @@ public class SeleniumTest {
         else
             System.out.println("Checkbox nie jest zaznaczony");*/
 
+        //SPRAWDZENIE CZY ELEMENT ISTNIEJE NA STRONIE
+        //checkIfElementExist(By.tagName("a"), driver);
+        //checkIfElementExist(By.tagName("abbbbbbbbbbbbbbbbbbbbbbb"), driver);
+
+        //JAK WYZEJ ALE ZA POMOCA BLOKU TRY CATCH
+        //checkIfElementExist(By.tagName("a"), driver);
+        //checkIfElementExist(By.tagName("abbbbbbbbbbbbbbbbbbbbbbb"), driver);
+
+        //PRZELACZANIE POMIEDZY OKNAMI
+       /* WebElement newPageButton = driver.findElement(By.id("newPage"));
+        newPageButton.click();
+        String currentWindowName = driver.getWindowHandle();
+        switchToNewWindow(driver, currentWindowName);
+        System.out.println("Tytul strony z aktywnego okna: " + driver.getTitle());
+        System.out.println("Obecny URL to: " + driver.getCurrentUrl());
+
+        //POWROT DO POPRZEDNIEGO OKNA
+        driver.switchTo().window(currentWindowName);
+        driver.findElement(By.name("username")).sendKeys(" Duck");*/
+
+        //UZYWANIE PRZEGLADARKI ZA POMOCA SELENIUM
+        driver.get("https://www.google.com");
+        WebElement searchInput = driver.findElement(By.name("q"));
+        searchInput.sendKeys("Selenium");
+        WebElement searchButton = driver.findElement(By.name("btnK"));
+        searchInput.sendKeys(Keys.ENTER);
+        WebElement seleniumPageLink = driver.findElement(By.className("iUh30"));
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        seleniumPageLink.click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        WebElement readMoreLink = driver.findElement(By.className("read-more"));
+        readMoreLink.click();
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         driver.quit();
     }
+
+    //METODA PRZEGLADAJACA OKNA
+    //JEZELI W KOLEKCJI BEDZIE WIECEJ NIZ JEDNO OKNO TO PRZELACZA SIE NA OKNO KTOREGO NAZWA JEST INNA OD OBECNIE OTWARTEGO
+
+    private void switchToNewWindow(WebDriver driver, String currentWindowName) {
+        System.out.println("Wartosc zmiennej currentWindowName: " + currentWindowName);
+        Set<String> windows = driver.getWindowHandles();
+        System.out.println("Ilosc okien przegladarki: " + windows.size());
+
+        for(String window : windows) {
+            if(!window.equals(currentWindowName))
+            {
+                driver.switchTo().window(window);
+            }
+        }
+    }
+
+    //METODY SPRAWDZAJACE CZY ELEMENT ISTNIEJE NA STRONIE
+    public boolean checkIfElementExist(By locator, WebDriver driver)
+    {
+        if(driver.findElements(locator).size()>0)
+        {
+            System.out.println("Element istnieje na stronie.");
+            return true;
+        }
+        System.out.println("Element nie istnieje na stronie.");
+        return false;
+    }
+
+    public void checkIfElementExist(WebDriver driver, By locator)
+    {
+        try {
+            driver.findElements(locator);
+            System.out.println("Element istnieje na stronie.");
+
+        }catch (NoSuchElementException ex) {
+            System.out.println("Element nie istnieje na stronie.");
+        }
+    }
+
 }
