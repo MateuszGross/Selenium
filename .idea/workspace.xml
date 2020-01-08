@@ -1,11 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab2ca65f-a88b-4cc5-a0f7-e89de3859eb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="96527b98-cfb5-4cdc-99a8-149e72ff8107" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/src/main/resources/executables/drivers/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/src/main/resources/executables/drivers/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/src/main/resources/executables/drivers/.idea/drivers.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/src/main/resources/executables/drivers/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/src/main/resources/executables/drivers/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/src/main/resources/executables/drivers/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/src/test/java/SeleniumTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/classes/executables/drivers/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/classes/executables/drivers/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/classes/executables/drivers/.idea/drivers.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/classes/executables/drivers/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/classes/executables/drivers/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/classes/executables/drivers/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/SeleniumTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/SeleniumTest/Command line test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/SeleniumTest/Command line test.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/SeleniumTest/testng-failed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/TEST-SeleniumTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/bullet_point.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/collapseall.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/emailable-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/failed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/jquery-1.7.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/junitreports/TEST-SeleniumTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/navigator-bullet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/old/SeleniumTest/Command line test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/old/SeleniumTest/classes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/old/SeleniumTest/groups.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/old/SeleniumTest/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/old/SeleniumTest/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/old/SeleniumTest/methods-alphabetical.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/old/SeleniumTest/methods-not-run.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/old/SeleniumTest/methods.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/old/SeleniumTest/reporter-output.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/old/SeleniumTest/testng.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/old/SeleniumTest/toc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/old/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/passed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/skipped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/testng-failed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/testng-reports.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/testng-reports.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/testng-results.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/surefire-reports/testng.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/test-classes/META-INF/Selenium.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic operations with Selenium/target/test-classes/SeleniumTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selenium.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SeleniumTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/executables/drivers/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/executables/drivers/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/executables/drivers/.idea/drivers.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/executables/drivers/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/executables/drivers/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/executables/drivers/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SeleniumTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/executables/drivers/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/executables/drivers/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/executables/drivers/.idea/drivers.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/executables/drivers/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/executables/drivers/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/executables/drivers/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/SeleniumTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/SeleniumTest/Command line test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/SeleniumTest/Command line test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/SeleniumTest/testng-failed.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-SeleniumTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/bullet_point.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/collapseall.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/failed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/jquery-1.7.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-SeleniumTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/navigator-bullet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/SeleniumTest/Command line test.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/SeleniumTest/classes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/SeleniumTest/groups.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/SeleniumTest/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/SeleniumTest/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/SeleniumTest/methods-alphabetical.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/SeleniumTest/methods-not-run.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/SeleniumTest/methods.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/SeleniumTest/reporter-output.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/SeleniumTest/testng.xml.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/SeleniumTest/toc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/passed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/skipped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SeleniumTest.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,41 +127,16 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="$CLASS$" />
-        <option value="$CLASS$" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="MateuszGross &lt;mateuszgross1@gmail.com&gt;" />
-      </list>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
+  <component name="ProjectId" id="1W7jb9soTPDfy83e8gFdJ1AAoUl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectId" id="1UWT09fZ5ZH4dnBeZflSNiHTO44" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\Desktop\Kurs JAVA\Selenium1\src\main\resources\executables\drivers" />
-    </key>
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Basic operations with Selenium/pom.xml" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -64,83 +150,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.SeleniumTest.chromeOpenTest">
-    <configuration name="HelloTest.sayHello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Selenium1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="HelloTest" />
-      <option name="METHOD_NAME" value="sayHello" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SeleniumTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Selenium" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SeleniumTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SeleniumTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Selenium1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SeleniumTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SeleniumTest.chromeOpenTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Selenium" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SeleniumTest" />
-      <option name="METHOD_NAME" value="chromeOpenTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SeleniumTest.operaOpenTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Selenium1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SeleniumTest" />
-      <option name="METHOD_NAME" value="operaOpenTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="TestNG.SeleniumTest.chromeOpenTest" />
-        <item itemvalue="TestNG.SeleniumTest (1)" />
-        <item itemvalue="TestNG.SeleniumTest.operaOpenTest" />
-        <item itemvalue="TestNG.SeleniumTest" />
-        <item itemvalue="JUnit.HelloTest.sayHello" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ab2ca65f-a88b-4cc5-a0f7-e89de3859eb9" name="Default Changelist" comment="" />
-      <created>1564150356728</created>
+      <changelist id="96527b98-cfb5-4cdc-99a8-149e72ff8107" name="Default Changelist" comment="" />
+      <created>1578507596423</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1564150356728</updated>
+      <updated>1578507596423</updated>
     </task>
     <servers />
   </component>
@@ -155,8 +174,7 @@
       </map>
     </option>
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Selenium$SeleniumTest_chromeOpenTest.ic" NAME="SeleniumTest.chromeOpenTest Coverage Results" MODIFIED="1576172053112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Selenium$SeleniumTest__1_.ic" NAME="SeleniumTest (1) Coverage Results" MODIFIED="1575471345016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

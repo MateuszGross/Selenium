@@ -1,6 +1,8 @@
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -8,13 +10,19 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 
 public class SeleniumTest {
+    private WebDriver driver; //WYMAGANE DLA METODY TEARDOWN
+
+    @BeforeClass
+    public void setUp(){
+        System.out.println("Przed klasa");
+        String driverPath = "C:/Users/Admin/Desktop/JAVA/Selenium/Basic operations with Selenium/src/main/resources/executables/drivers/chromedriver.exe";
+        System.setProperty("webdriver.chrome.driver", driverPath);
+        driver = new ChromeDriver();
+        //driver.manage().window().maximize();
+    }
 
     @Test
     public void chromeOpenTest() {
-        String driverPath = "C:/Users/Admin/Desktop/JAVA/Selenium/src/main/resources/executables/drivers/chromedriver.exe";
-        System.setProperty("webdriver.chrome.driver", driverPath);
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
         //driver.get("C:\\Users\\Admin\\Desktop\\MaterialyDoSelenium\\Test.html");
         /*WebElement clickOnMeButton = driver.findElement(By.id("clickOnMe"));
         WebElement firstNameInput = driver.findElement(By.name("fname"));
@@ -116,17 +124,11 @@ public class SeleniumTest {
         driver.findElement(By.name("username")).sendKeys(" Duck");*/
 
         //UZYWANIE PRZEGLADARKI ZA POMOCA SELENIUM
-        driver.get("https://www.google.com");
+       /* driver.get("https://www.google.com");
         WebElement searchInput = driver.findElement(By.name("q"));
         searchInput.sendKeys("Selenium");
-        WebElement searchButton = driver.findElement(By.name("btnK"));
         searchInput.sendKeys(Keys.ENTER);
         WebElement seleniumPageLink = driver.findElement(By.className("iUh30"));
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         seleniumPageLink.click();
         try {
             Thread.sleep(3000);
@@ -135,19 +137,41 @@ public class SeleniumTest {
         }
         WebElement readMoreLink = driver.findElement(By.className("read-more"));
         readMoreLink.click();
-
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        driver.quit();*/
+
+        driver.get("https://www.google.com");
+        WebElement searchInput = driver.findElement(By.name("q"));
+        searchInput.sendKeys("Selenium");
+        searchInput.sendKeys(Keys.ENTER);
+        WebElement seleniumPageLink = driver.findElement(By.className("iUh30"));
+        seleniumPageLink.click();
+        //driver.navigate().back();
+
+        String expectedTitle = "SeleniumHQ Browser Automation";
+
+        Assert.assertEquals(driver.getTitle(), expectedTitle);
+        //LUB
+        //Assert.assertTrue(expectedTitle.equals(driver.getTitle()));
+
+    }
+
+    //METODA WYKONUJE SIE PO TESCIE ABY ZAMKNAC DRIVER
+    @AfterClass
+    public void tearDown(){
+        System.out.println("Wykonuje się po klasie");
         driver.quit();
     }
 
+
+
     //METODA PRZEGLADAJACA OKNA
     //JEZELI W KOLEKCJI BEDZIE WIECEJ NIZ JEDNO OKNO TO PRZELACZA SIE NA OKNO KTOREGO NAZWA JEST INNA OD OBECNIE OTWARTEGO
-
-    private void switchToNewWindow(WebDriver driver, String currentWindowName) {
+/*      private void switchToNewWindow(WebDriver driver, String currentWindowName) {
         System.out.println("Wartosc zmiennej currentWindowName: " + currentWindowName);
         Set<String> windows = driver.getWindowHandles();
         System.out.println("Ilosc okien przegladarki: " + windows.size());
@@ -181,6 +205,6 @@ public class SeleniumTest {
         }catch (NoSuchElementException ex) {
             System.out.println("Element nie istnieje na stronie.");
         }
-    }
+    }*/
 
 }
