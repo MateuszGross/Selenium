@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class JavascriptExecution extends BaseSeleniumTest{
@@ -14,6 +15,11 @@ public class JavascriptExecution extends BaseSeleniumTest{
         //Jesli sendKeys z jakiegos powodu nie dziala to ratujemy sie javascriptem
         //executor.executeScript("alert('Hello World')");
         //executor.executeScript("arguments[0].click()", searchInput);
+
+        //Klikanie prawym przyciskiem myszy
+        Actions action = new Actions(driver);
+        action.contextClick().build().perform();
+
         executor.executeScript("arguments[0].setAttribute('value','Selenium')", searchInput);
         searchInput.sendKeys(Keys.ENTER);
         WebElement seleniumLink = driver.findElement(By.className("iUh30"));
