@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab2ca65f-a88b-4cc5-a0f7-e89de3859eb9" name="Default Changelist" comment="Some more exercises">
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/Tests in few classes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/src/main/resources/drivers/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/src/main/resources/drivers/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/src/main/resources/drivers/.idea/drivers.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/src/main/resources/drivers/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/src/main/resources/drivers/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/src/main/resources/drivers/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/src/test/java/BaseSeleniumTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/src/test/java/GoogleSearchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tests in few classes/src/test/java/HandlingFramesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SeleniumTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SeleniumTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SeleniumTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +57,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1UWT09fZ5ZH4dnBeZflSNiHTO44" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
@@ -67,7 +85,7 @@
     </option>
   </component>
   <component name="RunManager" selected="TestNG.SeleniumTest.chromeOpenTest">
-    <configuration name="HelloTest.sayHello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HelloTest.sayHello" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="Selenium1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="HelloTest" />
@@ -99,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SeleniumTest.chromeOpenTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SeleniumTest.chromeOpenTest" type="TestNG" nameIsGenerated="true">
       <module name="Selenium" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SeleniumTest" />
@@ -125,11 +143,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SeleniumTest.chromeOpenTest" />
         <item itemvalue="TestNG.SeleniumTest (1)" />
         <item itemvalue="TestNG.SeleniumTest.operaOpenTest" />
         <item itemvalue="TestNG.SeleniumTest" />
-        <item itemvalue="JUnit.HelloTest.sayHello" />
       </list>
     </recent_temporary>
   </component>
