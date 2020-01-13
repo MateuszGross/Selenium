@@ -16,7 +16,8 @@ public class JavascriptExecution extends BaseSeleniumTest{
         //executor.executeScript("arguments[0].click()", searchInput);
         executor.executeScript("arguments[0].setAttribute('value','Selenium')", searchInput);
         searchInput.sendKeys(Keys.ENTER);
-        WebElement seleniumPageLink = driver.findElement(By.className("iUh30"));
-        seleniumPageLink.click();
+        WebElement seleniumLink = driver.findElement(By.className("iUh30"));
+        executor.executeScript("arguments[0].click();", seleniumLink);
+        //seleniumPageLink.click();
     }
 }
