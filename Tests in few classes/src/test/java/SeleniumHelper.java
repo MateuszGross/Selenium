@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.LocalTime;
 
 public class SeleniumHelper {
 
@@ -19,7 +20,7 @@ public class SeleniumHelper {
             try {
                 TakesScreenshot screenshooter = (TakesScreenshot) driver;
                 File screenshot = screenshooter.getScreenshotAs(OutputType.FILE);
-                Files.copy(screenshot.toPath(), Paths.get("src/main/resources/test.png"));
+                Files.copy(screenshot.toPath(), Paths.get("src/main/resources/test"+ LocalTime.now().getNano() +".png"));
             } catch (IOException e) {
                 System.out.println("File not found");
             }
