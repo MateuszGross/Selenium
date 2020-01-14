@@ -8,11 +8,13 @@ public class DoubleClickTest extends BaseSeleniumTest {
 
     @Test
     public void doubleClickTest() {
+        SeleniumHelper helper = new SeleniumHelper(driver);
         driver.get("file:///C:/Users/Admin/Desktop/JAVA/Selenium/DoubleClick.html");
         WebElement button = driver.findElement(By.id("bottom"));
         Actions action = new Actions(driver);
         action.moveToElement(button);
         action.doubleClick().build().perform();
+        helper.takeScreenshot();
         Assert.assertTrue(driver.getWindowHandles().size()>1);
 
     }
