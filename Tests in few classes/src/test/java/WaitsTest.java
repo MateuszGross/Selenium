@@ -1,13 +1,11 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
+import java.util.function.Function;
 
 
 public class WaitsTest extends BaseSeleniumTest {
@@ -24,10 +22,21 @@ public class WaitsTest extends BaseSeleniumTest {
     }
 
     private void waitForWebElement(By locator) {
-        FluentWait<WebDriver> wait = new FluentWait<>(driver);
-        wait.pollingEvery(Duration.ofMillis(500)); //wykonuje zapytanie o element którego poszukujemy
-        wait.withTimeout(Duration.ofSeconds(10L));
-        wait.ignoring(NoSuchElementException.class); //dodajemy ponieważ fluent wait nie ignoruje NoFundException
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        WebDriverWait wait = new WebDriverWait(driver, 10L);
+
+        wait.until(new Function<WebDriver, Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                System.out.println("Sprawdzam czy element jest wyświetlony");   //LUB   List<WebElement> elements = driver.findElements(locator); przy uzyciu listy wchodzimy do elsa, w przypadku bez listy pomijamy else ponieważ ignorujemy wyjątek
+                if(driver.findElement(locator).isDisplayed()) {                         //if(elements.size()>0) {
+                    System.out.println("Element jest wyświetlony");
+                    return true;
+                } else {
+                    System.out.println("Element nie jest wyświetlony");
+                    return false;
+                    }
+                }
+            });
+        }
     }
-}
+
