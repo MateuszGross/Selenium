@@ -1,9 +1,9 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -24,8 +24,10 @@ public class WaitsTest extends BaseSeleniumTest {
     }
 
     private void waitForWebElement(By locator) {
-        Wait<WebDriver> wait = new WebDriverWait(driver, 10L);
-        ((WebDriverWait) wait).pollingEvery(Duration.ofMillis(500)); //wykonuje zapytanie o element którego poszukujemy
+        FluentWait<WebDriver> wait = new FluentWait<>(driver);
+        wait.pollingEvery(Duration.ofMillis(500)); //wykonuje zapytanie o element którego poszukujemy
+        wait.withTimeout(Duration.ofSeconds(10L));
+        wait.ignoring(NoSuchElementException.class); //dodajemy ponieważ fluent wait nie ignoruje NoFundException
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 }
