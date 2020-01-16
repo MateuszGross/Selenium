@@ -16,7 +16,7 @@ public abstract class BaseSeleniumTest {
 
     @AfterClass
     public void tearDown() throws InterruptedException {
-        Thread.sleep(4000);
+        //Thread.sleep(4000);
         driver.quit();
 
     }
