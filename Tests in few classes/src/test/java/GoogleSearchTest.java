@@ -26,7 +26,7 @@ public class GoogleSearchTest extends BaseSeleniumTest{
 
     /*@Test
     public void googleSearchTest2(){ //przy użyciu page factory możemy odwoływać się do searchInput z każdego testu w klasie
-        searchInput
+    searchInput
     }*/
 
 }
