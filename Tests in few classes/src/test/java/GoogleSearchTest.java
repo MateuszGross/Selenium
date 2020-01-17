@@ -5,20 +5,22 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 
 public class GoogleSearchTest extends BaseSeleniumTest{
 
     @FindBy(name = "q")
-    private  WebElement searchInput;
+    private List<WebElement> searchInput;
 
     @Test
     public void googleSearchTest(){
         SeleniumHelper helper = new SeleniumHelper(driver);
         PageFactory.initElements(driver, this ); //lub (driver, GoogleSearchTest.class); page factory inicjaluzuje nam search input
         driver.get("https://www.google.com");
-        searchInput.sendKeys("Selenium");
+        searchInput.get(0).sendKeys("Selenium");
         helper.takeScreenshot();
-        searchInput.sendKeys(Keys.ENTER);
+        searchInput.get(0).sendKeys(Keys.ENTER);
         WebElement seleniumPageLink = driver.findElement(By.className("iUh30"));
         seleniumPageLink.click();
         helper.takeScreenshot();
