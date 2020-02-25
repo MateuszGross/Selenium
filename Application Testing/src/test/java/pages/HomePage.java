@@ -1,10 +1,13 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class HomePage {
     @FindBy(xpath = "//span[text()='Search by Hotel or City Name']")
@@ -31,6 +34,11 @@ public class HomePage {
     @FindBy(xpath ="//button[text() = ' Search']")
     private WebElement searchButton;
 
+    @FindBy(xpath = "//table[@class='bgwhite table table-striped']")
+    private WebElement resultsTable;
+
+    @FindBy(xpath = "//div[@class='col-md-3 col-xs-4 col-sm-4 go-left pull-right price_tab']")
+    private WebElement priceTable;
 
     public HomePage(WebDriver driver) {
         PageFactory.initElements(driver,this);
@@ -63,5 +71,17 @@ public class HomePage {
         searchButton.click();
     }
 
+    public void getHotelNames() {
+       List<WebElement> hotelNames = resultsTable.findElements(By.xpath("//h4//b"));
+       for (WebElement hotelName : hotelNames) {
+           System.out.println(hotelName.getText());
+       }
+    }
 
+    public void getHotelPrices() {
+        List<WebElement> hotelPrices = resultsTable.findElements(By.xpath("//div[contains(@class,'price_tab')]//b"));
+        hotelPrices.stream().forEach(hotelPrice ->
+                System.out.println(hotelPrice.getText()));
+    }
 }
+

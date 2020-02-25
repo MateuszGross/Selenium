@@ -13,8 +13,10 @@ public class SearchHotelTest extends BaseSeleniumTest {
         driver.get("http://www.kurs-selenium.pl/demo/");
         HomePage homePage = new HomePage(driver);
         homePage.setCityHotel("Dubai");
-        homePage.setDateRange("09/11/2018", "09/13/2018");
+        homePage.setDateRange("09/11/2020", "09/13/2020");
         homePage.setTravellers("2","2");
         homePage.performSearch();
+        homePage.getHotelNames();
+        homePage.getHotelPrices();
     }
 }
