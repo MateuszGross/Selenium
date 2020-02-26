@@ -13,12 +13,13 @@ public class SearchHotelTest extends BaseSeleniumTest {
     public void searchHotelTest() {
         driver.get("http://www.kurs-selenium.pl/demo/");
         HomePage homePage = new HomePage(driver);
-        ResultPage resultPage =
-                homePage.setCityHotel("Dubai")
+        homePage.setCityHotel("Dubai")
                 .setDateRange("09/11/2020", "09/13/2020")
                 .clickTravellers()
                 .setTravellers("4","2")
                 .performSearch();
+
+        ResultPage resultPage = new ResultPage(driver);
 
         List<String> hotelNames = resultPage.getHotelNames();
             Assert.assertEquals(hotelNames.get(0),"Jumeirah Beach Hotel");
