@@ -1,15 +1,12 @@
 package pages;
 
+import helpers.SeleniumHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class HomePage {
     @FindBy(xpath = "//span[text()='Search by Hotel or City Name']")
@@ -36,20 +33,25 @@ public class HomePage {
     @FindBy(xpath ="//button[text() = ' Search']")
     private WebElement searchButton;
 
-    @FindBy(xpath = "//table[@class='bgwhite table table-striped']")
-    private WebElement resultsTable;
+    @FindBy(xpath = "//div[@class='select2-result-label']")
+    private WebElement selectResult;
 
-    @FindBy(xpath = "//div[@class='col-md-3 col-xs-4 col-sm-4 go-left pull-right price_tab']")
-    private WebElement priceTable;
+    private SeleniumHelper helper;
+
+    private WebDriver driver;
 
     public HomePage(WebDriver driver) {
         PageFactory.initElements(driver,this);
+        this.helper = new SeleniumHelper(driver);
+        this.driver = driver;
     }
 
-    public void setCityHotel(String cityName) throws InterruptedException {
+    public void setCityHotel(String cityName) {
         searchSpan.click();
         searchCityInput.sendKeys(cityName);
-        Thread.sleep(3000);
+        By locationLabel = By.xpath("//div[@class='select2-result-label']");
+        helper.waitForElementToBeDisplayed(locationLabel);
+        //helper.waitForElementToBeDisplayed(selectResult);
         searchCityInput.sendKeys(Keys.ENTER);
     }
 
@@ -73,20 +75,5 @@ public class HomePage {
         searchButton.click();
     }
 
-    public List<String> getHotelNames() {
-       List<String> hotelNames = new ArrayList<>();
-       List<WebElement> hotelNamesWebElements = resultsTable.findElements(By.xpath("//h4//b"));
-       for (WebElement hotelNameElement : hotelNamesWebElements) {
-           System.out.println(hotelNameElement.getText());
-           hotelNames.add(hotelNameElement.getText());
-       }
-       return hotelNames;
-    }
-
-    public List<String> getHotelPrices() {
-        List<WebElement> hotelPrices = resultsTable.findElements(By.xpath("//div[contains(@class,'price_tab')]//b"));
-        List<String> prices = hotelPrices.stream().map(element -> element.getText()).collect(Collectors.toList());
-        return prices;
-    }
 }
 
