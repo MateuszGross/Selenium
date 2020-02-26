@@ -81,8 +81,9 @@ public class HomePage {
         return this;
     }
 
-    public void performSearch(){
+    public ResultPage performSearch(){
         searchButton.click();
+        return new ResultPage(driver);
     }
 
 }
