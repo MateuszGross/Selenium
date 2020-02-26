@@ -7,7 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class HomePage {
     @FindBy(xpath = "//span[text()='Search by Hotel or City Name']")
@@ -71,17 +73,20 @@ public class HomePage {
         searchButton.click();
     }
 
-    public void getHotelNames() {
-       List<WebElement> hotelNames = resultsTable.findElements(By.xpath("//h4//b"));
-       for (WebElement hotelName : hotelNames) {
-           System.out.println(hotelName.getText());
+    public List<String> getHotelNames() {
+       List<String> hotelNames = new ArrayList<>();
+       List<WebElement> hotelNamesWebElements = resultsTable.findElements(By.xpath("//h4//b"));
+       for (WebElement hotelNameElement : hotelNamesWebElements) {
+           System.out.println(hotelNameElement.getText());
+           hotelNames.add(hotelNameElement.getText());
        }
+       return hotelNames;
     }
 
-    public void getHotelPrices() {
+    public List<String> getHotelPrices() {
         List<WebElement> hotelPrices = resultsTable.findElements(By.xpath("//div[contains(@class,'price_tab')]//b"));
-        hotelPrices.stream().forEach(hotelPrice ->
-                System.out.println(hotelPrice.getText()));
+        List<String> prices = hotelPrices.stream().map(element -> element.getText()).collect(Collectors.toList());
+        return prices;
     }
 }
 
