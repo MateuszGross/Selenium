@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.concurrent.TimeUnit;
+
 public class HomePage {
     @FindBy(xpath = "//span[text()='Search by Hotel or City Name']")
     private WebElement searchSpan;
@@ -46,29 +48,37 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public void setCityHotel(String cityName) {
+    public HomePage setCityHotel(String cityName) {
         searchSpan.click();
         searchCityInput.sendKeys(cityName);
         By locationLabel = By.xpath("//div[@class='select2-result-label']");
         helper.waitForElementToBeDisplayed(locationLabel);
         //helper.waitForElementToBeDisplayed(selectResult);
         searchCityInput.sendKeys(Keys.ENTER);
+        return this;
     }
 
-    public void setDateRange(String checkInDate, String checkOutDate) {
+    public HomePage setDateRange(String checkInDate, String checkOutDate) {
         checkInInput.sendKeys(checkInDate);
         checkOutInput.sendKeys(checkOutDate);
         checkOutInput.click();
+        return this;
     }
 
-    public void setTravellers(String adultNumber, String childNumber) {
+    public HomePage clickTravellers() {
         travellersInput.click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        return this;
+    }
+
+    public HomePage setTravellers(String adultNumber, String childNumber) {
         adultInput.click();
         adultInput.clear();
         adultInput.sendKeys(adultNumber);
         childInput.click();
         childInput.clear();
         childInput.sendKeys(childNumber);
+        return this;
     }
 
     public void performSearch(){
